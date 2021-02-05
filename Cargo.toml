@@ -1,5 +1,5 @@
 [package]
-name = "image2linetext"
+name = "img2utf"
 version = "0.1.0"
 authors = ["Lee <inbox@leefallat.ca>"]
 edition = "2018"
