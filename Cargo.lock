@@ -44,7 +44,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "image2linetext"
+name = "img2utf"
 version = "0.1.0"
 dependencies = [
  "png",

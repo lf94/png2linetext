@@ -22,21 +22,23 @@ use std::{
 // 
 
 const MATRIX_WIDTH_HEIGHT: usize = 3;
-const NO_MASKS: usize = 45;
+const NO_MASKS: usize = 46;
 
 const LINETEXT1: [char; NO_MASKS] = [
-  '█',
-  '█',
-  '█',
+  ' ',
+  
+  '▉',
+  '▉',
+  '▉',
   '🬸',
   '🬸',
   '🭖',
-  '█',
-  '█',
+  '▉',
+  '▉',
   '🭅',
   '🭔',
-  '█',
-  '█',
+  '▉',
+  '▉',
   '🭃',
   
   '🮅',
@@ -82,19 +84,21 @@ const LINETEXT1: [char; NO_MASKS] = [
 ];
 
 const LINETEXT2: [char; NO_MASKS] = [
-  '█',
+  ' ',
+  
+  '▉',
   '🬴',
   '🬴',
-  '█',
-  '█',
-  '█',
+  '▉',
+  '▉',
+  '▉',
   '🭡',
   '🭐',
-  '█',
-  '█',
+  '▉',
+  '▉',
   '🭟',
   '🭎',
-  '█',
+  '▉',
   
   '🮅',
   '▆',
@@ -139,6 +143,12 @@ const LINETEXT2: [char; NO_MASKS] = [
 ];
 
 const MASKS: [[[u8; MATRIX_WIDTH_HEIGHT]; MATRIX_WIDTH_HEIGHT]; NO_MASKS] = [
+  [
+    [1,1,1],
+    [1,1,1],
+    [1,1,1],
+  ],
+  
   [
     [0,0,0],
     [0,0,0],
@@ -461,8 +471,8 @@ fn bitplane_to_linetext(buf: Vec<Vec<u8>>, width: u32, height: u32) {
     // Set to " " as the default for missing patterns.
     // 
     if shifted >= MATRIX_WIDTH_HEIGHT {
-      print!(" ");
-      print!(" ");
+      print!("🮕");
+      print!("🮕");
       //println!("{}:{}", x, y);
       shifted = 0;
     }
