@@ -1,21 +1,17 @@
-# png2linetext
+# img2utf
 
-Transform PNG to textual line art!
+Transform images to textual line art!
 
 Images require pre-processing to come out nice. It's expected that users will do
 the following:
 
 1. Apply gaussian blur to remove noise and details.
 2. Remove the color from the image.
-3. Resize the image to 240px width (80 characters) and round the height to the
-nearest number divisible by 3.
-4. Apply an edge detection algorithm.
-5. Invert the image to see the line art.
-6. Run this program on the image.
+3. Apply an edge detection algorithm.
+4. Invert the image to see the line art.
+5. Run this program on the image.
 
-Usage is simple: `png2linetext image.png`
-
-If the width and height are not divisible by 3, the program will crash.
+Usage is simple: `cargo run image.png`
 
 ## Explanation
 
